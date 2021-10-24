@@ -2,32 +2,32 @@
 ***
 ### Настройка локального окружения <br> <br>(OsPanel, GitBash, Composer)
 <h3>1. Установка OpenServer</h3>
-Не стал ставить все компоненты, поставил только нужные для развёртывания Laravel'a. 
-Можете выполнять стандартную установку со всеми предлагаемымми компонентами.  
-У меня вышло чёт такое:
+Не стал ставить все компоненты, поставил только нужные для развёртывания Laravel'a. <br>  
+Можете выполнять стандартную установку со всеми предлагаемымми компонентами.  <br>
+У меня вышло чёт такое: <br>
 
 ![img.png](images-for-git/img.png) <br>
 
 ![img_1.png](images-for-git/img_1.png) <br>
 
-<h4>Для развёртывания Laravel хватит и этих модулей:</h4>
-1. HTTP: Apache_2.4PHP_8.0 (есть вариация с NGINX, но её лучше не использовать иначе нужно будет беседовать с composer'om)
-2. Php: PHP_8.0
+<h4>Для развёртывания Laravel хватит и этих модулей:</h4> 
+1. HTTP: Apache_2.4PHP_8.0 (есть вариация с NGINX, но её лучше не использовать иначе нужно будет беседовать с composer'om) <br>
+2. Php: PHP_8.0 <br>
 
 ![img_2.png](images-for-git/img_2.png) <br>
 
-<b>Сохранить и перезагрузить OSPanel</b>
-<h3>2. Установка Git'a</h3>
+<b>Сохранить и перезагрузить OSPanel</b> <br>
+<h3>2. Установка Git'a</h3> 
 
-Можете выбрать редактор кода, который больше нравится вам или оставить поумолчанию. В моём предпочтении VsCode
+Можете выбрать редактор кода, который больше нравится вам или оставить поумолчанию. В моём предпочтении VsCode <br>
 
-Остальные настройки по умолчанию
+Остальные настройки по умолчанию <br>
 
 ![img_6.png](images-for-git/img_6.png) <br>
 
 <h3>3. Установка Composer'a</h3>
-Да, он вроде шёл вместе с OSPanel, но привычка, и так действительно лучше) 
-Прокладываете путь к модулю пыхи в OsPanel Остальное по умолчанию
+Да, он вроде шёл вместе с OSPanel, но привычка, и так действительно лучше) <br>
+Прокладываете путь к модулю пыхи в OsPanel Остальное по умолчанию <br>
 
 ![img_22.png](images-for-git/img_22.png) <br>
 
@@ -38,14 +38,15 @@
 ***
 
 <h2>Развёртывание проекта Laravel на локальной машине</h2>
-1. Стартуем OsPanel;
-2. Открываем GitBash (можно просто ввести в меню пуск git скорее всего git bash будет первым в списке);
-3. В GitBash'e переходим в директорию <code>OpenServer\domains</code> у меня это <code>C:\OpenServer\domains</code> для этого в bash'e нужно написать следующее <br> <code>cd /C/OpenServer/domains/
-   </code> <br>
+1. Стартуем OsPanel; <br>
+2. Открываем GitBash (можно просто ввести в меню пуск git скорее всего git bash будет первым в списке); <br>
+3. В GitBash'e переходим в директорию <code>OpenServer\domains</code> у меня это <code>C:\OpenServer\domains</code> для этого в bash'e нужно написать следующее <br> 
+<code>cd /C/OpenServer/domains/</code> <br>
 
 ![img_20.png](images-for-git/img_20.png) <br>
 
-4. Качаем проект через <b>composer</b>. Для этого в bash вводим: <br> <code>composer create-project laravel/laravel</code> <br>
+4. Качаем проект через <b>composer</b>. 
+Для этого в bash вводим: <br> <code>composer create-project laravel/laravel</code> <br>
 ![img_21.png](images-for-git/img_21.png) <br>
    <br>
 ![img_24.png](images-for-git/img_24.png) <br>
@@ -84,65 +85,65 @@
 8. Архивируем папку Laravel.
 
 <h2>Подготовка хостинга для загрузки проекта</h2>
-1. Переходим в админ панель хостинга под своими данными.
-2. Заходим во вкладку "Sites"
+1. Переходим в админ панель хостинга под своими данными. <br>
+2. Заходим во вкладку "Sites" <br>
 
 ![img_31.png](images-for-git/img_31.png) <br>
 
-3. Нажимаем на шестерёнку в форме "Sites and linked domains" 
+3. Нажимаем на шестерёнку в форме "Sites and linked domains"  <br>
 
 ![img_32.png](images-for-git/img_32.png) <br>
 
-4. Меняем версию php с 5.6 на 7.4
+4. Меняем версию php с 5.6 на 7.4 <br>
 
 ![img_33.png](images-for-git/img_33.png) <br>
 
 ![img_34.png](images-for-git/img_34.png) <br>
 
-5. Возвращаемся на главную страницу админки
-6. Переходим на вкладку "File manager" 
+5. Возвращаемся на главную страницу админки <br>
+6. Переходим на вкладку "File manager"  <br>
 
 ![img_35.png](images-for-git/img_35.png) <br>
 
-7. После того как перешли в Файловый менеджер заходим в папку с сайтом у меня это <code>e92507ja.beget.tech</code>
+7. После того как перешли в Файловый менеджер заходим в папку с сайтом у меня это <code>e92507ja.beget.tech</code> <br>
    
 ![img_36.png](images-for-git/img_36.png) <br>
 
-9. В папку с сайтом <code>e92507ja.beget.tech</code> грузим наш проект архивом <code>laravel.7z[.rar, .zip]</code>
-Для этого в менюшке сверху выбираем "Загрузить файлы"
+9. В папку с сайтом <code>e92507ja.beget.tech</code> грузим наш проект архивом <code>laravel.7z[.rar, .zip]</code> <br>
+Для этого в менюшке сверху выбираем "Загрузить файлы" <br>
 
 ![img_37.png](images-for-git/img_37.png) <br>
 
-Дальше жмём <b>Browse...</b> и выбираем архив и жмём "Открыть" потом в форме нажимаем "Загрузка" 
+Дальше жмём <b>Browse...</b> и выбираем архив и жмём "Открыть" потом в форме нажимаем "Загрузка"  <br>
 
 ![img_38.png](images-for-git/img_38.png) <br>
      
 ![img_39.png](images-for-git/img_39.png) <br>
 
-После того как файл был загружен можем закрыть форму
+После того как файл был загружен можем закрыть форму <br>
 
 ![img_40.png](images-for-git/img_40.png) <br>
 
-Жмём по архиву "ПКМ" - "Распаковать архив" 
+Жмём по архиву "ПКМ" - "Распаковать архив"  <br>
 
 ![img_41.png](images-for-git/img_41.png) <br>
 
-Распаковка займёт какое-то время. 
+Распаковка займёт какое-то время.  <br>
 
 Спустя 5-8 мин. Архив распакован. <br> 
-В итоге в папке <code>e92507ja.beget.tech</code> у нас находятся 3 файла: папка <code>laravel</code>, папка <code>public_html</code>, архив <code>laravel.7z</code>
+В итоге в папке <code>e92507ja.beget.tech</code> у нас находятся 3 файла: папка <code>laravel</code>, папка <code>public_html</code>, архив <code>laravel.7z</code> <br>
 
 ![img_42.png](images-for-git/img_42.png) <br>
 
-9. В левом окне открываем папку <code>laravel</code>, а вправом папку <code>public_html</code> и в правом окне удаляем все файлы кроме папки <br> <code>cgi-bin</code> в итоге должно выглядить как на скриншоте ниже
+9. В левом окне открываем папку <code>laravel</code>, а вправом папку <code>public_html</code> и в правом окне удаляем все файлы кроме папки  <code>cgi-bin</code> в итоге должно выглядить как на скриншоте ниже <br>
    
 ![img_43.png](images-for-git/img_43.png) <br>
 
-10. В левом окне переходим в папку <code>public</code>, выделяем все файлы кроме <code>..</code>, далее жмём "ПКМ" - "Переместить"
+10. В левом окне переходим в папку <code>public</code>, выделяем все файлы кроме <code>..</code>, далее жмём "ПКМ" - "Переместить" <br>
 
 ![img_44.png](images-for-git/img_44.png) <br>
 
-11. В итоге, все файлы из папки <code>public</code> переместились в папку <code>public_html</code>
+11. В итоге, все файлы из папки <code>public</code> переместились в папку <code>public_html</code> <br>
 
 ![img_45.png](images-for-git/img_45.png) <br>
 
