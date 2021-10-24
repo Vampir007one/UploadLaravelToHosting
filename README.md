@@ -14,9 +14,6 @@
 1. HTTP: Apache_2.4PHP_8.0 (есть вариация с NGINX, но её лучше не использовать иначе нужно будет беседовать с composer'om)
 2. Php: PHP_8.0
 
-
-
-
 ![img_2.png](images-for-git/img_2.png) <br>
 
 <b>Сохранить и перезагрузить OSPanel</b>
@@ -36,9 +33,7 @@
 
 Для проверки что всё установлено правильно, можете зайти в gitBash и прописать:<code>composer --version</code>
 
-
 ![img_23.png](images-for-git/img_23.png) <br>
-
 
 ***
 
@@ -73,13 +68,13 @@
     ![img_28.png](images-for-git/img_28.png) <br>
 
 <h2>Подготовка проекта к отправке на хостинг</h2>
-1. Чтобы вернуть возможность писать команды в Bash'e и выключить сервер используем сочетание клавиш: <code>CTRL + C</code> 
-2. В директории <code>domains\laravel</code> ищем два файла <code>composer.json</code> и <code>composer.lock</code> открываем их любом текстовом редакторе. 
-3. В файле <code>composer.json</code> редактируем строчку № 8, <code>"php": "^7.3|^8.0"</code> в итоге должно получиться <code>"php": "^7.3"</code>, сохраняем файл 
-4. В файле <code>composer.lock</code> редактируем строчку № 24, <br><code>"php": "^7.0|^8.0"</code> в итоге должно получиться <code>"php": "^7.0"</code>, сохраняем файл
+1. Чтобы вернуть возможность писать команды в Bash'e и выключить сервер используем сочетание клавиш: <code>CTRL + C</code> <br>
+2. В директории <code>domains\laravel</code> ищем два файла <code>composer.json</code> и <code>composer.lock</code> открываем их любом текстовом редакторе. <br>
+3. В файле <code>composer.json</code> редактируем строчку № 8, <code>"php": "^7.3|^8.0"</code> в итоге должно получиться <code>"php": "^7.3"</code>, сохраняем файл <br>
+4. В файле <code>composer.lock</code> редактируем строчку № 24, <br><code>"php": "^7.0|^8.0"</code> в итоге должно получиться <code>"php": "^7.0"</code>, сохраняем файл <br>
 5. В Bash'e вводим <code>composer install --ignore-platform-reqs</code> <br>
 
-    ![img_29.png](images-for-git/img_29.png) <br>
+![img_29.png](images-for-git/img_29.png) <br>
 
 6. Получаем сообщение:
 
@@ -120,36 +115,38 @@
 
 Дальше жмём <b>Browse...</b> и выбираем архив и жмём "Открыть" потом в форме нажимаем "Загрузка" 
 
-    ![img_38.png](images-for-git/img_38.png) <br>
+![img_38.png](images-for-git/img_38.png) <br>
      
-    ![img_39.png](images-for-git/img_39.png) <br>
+![img_39.png](images-for-git/img_39.png) <br>
 
 После того как файл был загружен можем закрыть форму
 
-    ![img_40.png](images-for-git/img_40.png) <br>
+![img_40.png](images-for-git/img_40.png) <br>
 
 Жмём по архиву "ПКМ" - "Распаковать архив" 
 
-    ![img_41.png](images-for-git/img_41.png) <br>
+![img_41.png](images-for-git/img_41.png) <br>
 
 Распаковка займёт какое-то время. 
 
 Спустя 5-8 мин. Архив распакован. <br> 
 В итоге в папке <code>e92507ja.beget.tech</code> у нас находятся 3 файла: папка <code>laravel</code>, папка <code>public_html</code>, архив <code>laravel.7z</code>
 
-    ![img_42.png](images-for-git/img_42.png) <br>
+![img_42.png](images-for-git/img_42.png) <br>
 
 9. В левом окне открываем папку <code>laravel</code>, а вправом папку <code>public_html</code> и в правом окне удаляем все файлы кроме папки <br> <code>cgi-bin</code> в итоге должно выглядить как на скриншоте ниже
    
 ![img_43.png](images-for-git/img_43.png) <br>
+
 10. В левом окне переходим в папку <code>public</code>, выделяем все файлы кроме <code>..</code>, далее жмём "ПКМ" - "Переместить"
 
 ![img_44.png](images-for-git/img_44.png) <br>
 
 11. В итоге, все файлы из папки <code>public</code> переместились в папку <code>public_html</code>
+
 ![img_45.png](images-for-git/img_45.png) <br>
 
-12. В папке <code>public_html</code> открываем файл <code>index.php</code> чтобы отредактировать его <br> Нас интересует строка № 34 <br> <code>require __DIR__.'/../vendor/autoload.php';</code> 
+13. В папке <code>public_html</code> открываем файл <code>index.php</code> чтобы отредактировать его <br> Нас интересует строка № 34 <br> <code>require __DIR__.'/../vendor/autoload.php';</code> 
 Перед <code>vendor</code> добавляем директорию <code>laravel</code>
 
 В итоге строка должна выглядить так: <br><code>require __DIR__.'/../laravel/vendor/autoload.php';</code>
