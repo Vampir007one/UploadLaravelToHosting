@@ -14,9 +14,6 @@
 1. HTTP: Apache_2.4PHP_8.0 (есть вариация с NGINX, но её лучше не использовать иначе нужно будет беседовать с composer'om)
 2. Php: PHP_8.0
 
-
-
-
 ![img_2.png](images-for-git/img_2.png)
 
 <p><b>Сохранить и перезагрузить OSPanel</b></p>
@@ -77,69 +74,69 @@
 8. Архивируем папку Laravel.
 
 <h2>Подготовка хостинга для загрузки проекта</h2>
-1. Переходим в админ панель хостинга под своими данными.
-2. Заходим во вкладку "Sites"
-![img_31.png](images-for-git/img_31.png)
-3. Нажимаем на шестерёнку в форме "Sites and linked domains" 
-![img_32.png](images-for-git/img_32.png)
-4. Меняем версию php с 5.6 на 7.4
-    ![img_33.png](images-for-git/img_33.png)
-    ![img_34.png](images-for-git/img_34.png)
-5. Возвращаемся на главную страницу админки
-6. Переходим на вкладку "File manager" 
-    ![img_35.png](images-for-git/img_35.png)
-7. После того как перешли в Файловый менеджер заходим в папку с сайтом у меня это <code>e92507ja.beget.tech</code>
-    ![img_36.png](images-for-git/img_36.png)
-8. В папку с сайтом <code>e92507ja.beget.tech</code> грузим наш проект архивом <code>laravel.7z[.rar, .zip]</code>
-<p>Для этого в менюшке сверху выбираем "Загрузить файлы"</p>
+1. Переходим в админ панель хостинга под своими данными. <br>
+2. Заходим во вкладку "Sites" <br>
+![img_31.png](images-for-git/img_31.png) <br>
+3. Нажимаем на шестерёнку в форме "Sites and linked domains" <br>
+![img_32.png](images-for-git/img_32.png) <br>
+4. Меняем версию php с 5.6 на 7.4 <br>
+    ![img_33.png](images-for-git/img_33.png) <br>
+    ![img_34.png](images-for-git/img_34.png) <br>
+5. Возвращаемся на главную страницу админки <br>
+6. Переходим на вкладку "File manager"  <br>
+    ![img_35.png](images-for-git/img_35.png) <br>
+7. После того как перешли в Файловый менеджер заходим в папку с сайтом у меня это <code>e92507ja.beget.tech</code> <br>
+    ![img_36.png](images-for-git/img_36.png) <br>
+8. В папку с сайтом <code>e92507ja.beget.tech</code> грузим наш проект архивом <code>laravel.7z[.rar, .zip]</code> <br>
+<p>Для этого в менюшке сверху выбираем "Загрузить файлы"</p> <br>
 
-![img_37.png](images-for-git/img_37.png)
+![img_37.png](images-for-git/img_37.png) <br>
 
-<p>Дальше жмём <b>Browse...</b> и выбираем архив и жмём "Открыть" потом в форме нажимаем "Загрузка" </p>
+<p>Дальше жмём <b>Browse...</b> и выбираем архив и жмём "Открыть" потом в форме нажимаем "Загрузка" </p> <br>
 
-![img_38.png](images-for-git/img_38.png)
+![img_38.png](images-for-git/img_38.png) <br>
      
-![img_39.png](images-for-git/img_39.png)
+![img_39.png](images-for-git/img_39.png) <br>
 
-<p>После того как файл был загружен можем закрыть форму</p>
+<p>После того как файл был загружен можем закрыть форму</p> <br>
+ 
+![img_40.png](images-for-git/img_40.png) <br>
+ 
+<p>Жмём по архиву "ПКМ" - "Распаковать архив" </p> <br>
 
-![img_40.png](images-for-git/img_40.png)
+![img_41.png](images-for-git/img_41.png) <br>
 
-<p>Жмём по архиву "ПКМ" - "Распаковать архив" </p>
+<p>Распаковка займёт какое-то время. </p> <br>
 
-![img_41.png](images-for-git/img_41.png)
+<p>Спустя 5-8 мин. Архив распакован. <br>  <br>
+В итоге в папке <code>e92507ja.beget.tech</code> у нас находятся 3 файла: папка <code>laravel</code>, папка <code>public_html</code>, архив <code>laravel.7z</code></p> <br>
 
-<p>Распаковка займёт какое-то время. </p>
+![img_42.png](images-for-git/img_42.png) <br>
 
-<p>Спустя 5-8 мин. Архив распакован. <br> 
-В итоге в папке <code>e92507ja.beget.tech</code> у нас находятся 3 файла: папка <code>laravel</code>, папка <code>public_html</code>, архив <code>laravel.7z</code></p>
-
-![img_42.png](images-for-git/img_42.png)
-
-9. <p>В левом окне открываем папку <code>laravel</code>, а вправом папку <code>public_html</code> и в правом окне удаляем все файлы кроме папки <br> <code>cgi-bin</code> в итоге должно выглядить как на скриншоте ниже</p>
+9. <p>В левом окне открываем папку <code>laravel</code>, а вправом папку <code>public_html</code> и в правом окне удаляем все файлы кроме папки <br> <code>cgi-bin</code> в итоге должно выглядить как на скриншоте ниже</p> <br>
    
 ![img_43.png](images-for-git/img_43.png)
-10. <p>В левом окне переходим в папку <code>public</code>, выделяем все файлы кроме <code>..</code>, далее жмём "ПКМ" - "Переместить"<p>
+10. <p>В левом окне переходим в папку <code>public</code>, выделяем все файлы кроме <code>..</code>, далее жмём "ПКМ" - "Переместить"<p> <br>
 
-![img_44.png](images-for-git/img_44.png)
+![img_44.png](images-for-git/img_44.png) <br>
 
 11. <p>В итоге, все файлы из папки <code>public</code> переместились в папку <code>public_html</code></p>
-![img_45.png](images-for-git/img_45.png)
+![img_45.png](images-for-git/img_45.png) <br>
 
-12. <p>В папке <code>public_html</code> открываем файл <code>index.php</code> чтобы отредактировать его <br> Нас интересует строка № 34 <br> <code>require __DIR__.'/../vendor/autoload.php';</code></p> 
-<p>Перед <code>vendor</code> добавляем директорию <code>laravel</code></p>
+12. <p>В папке <code>public_html</code> открываем файл <code>index.php</code> чтобы отредактировать его <br> Нас интересует строка № 34 <br> <code>require __DIR__.'/../vendor/autoload.php';</code></p> <br>
+<p>Перед <code>vendor</code> добавляем директорию <code>laravel</code></p> <br>
 
-<p>В итоге строка должна выглядить так: <br><code>require __DIR__.'/../laravel/vendor/autoload.php';</code></p>
-<p>Дальше в этом же файле ищем строку №47: <br> <code>$app = require_once __DIR__.'/../bootstrap/app.php';</code></p>
-<p>Делаем тоже самое. В итоге строка выглядит, так: <br> <code>$app = require_once __DIR__.'/../laravel/bootstrap/app.php';</code></p>
+<p>В итоге строка должна выглядить так: <br><code>require __DIR__.'/../laravel/vendor/autoload.php';</code></p> <br>
+<p>Дальше в этом же файле ищем строку №47: <br> <code>$app = require_once __DIR__.'/../bootstrap/app.php';</code></p> <br>
+<p>Делаем тоже самое. В итоге строка выглядит, так: <br> <code>$app = require_once __DIR__.'/../laravel/bootstrap/app.php';</code></p> <br>
 
-![img_46.png](images-for-git/img_46.png)
+![img_46.png](images-for-git/img_46.png) <br>
 
-<p>Сохраняем файл. "Файл" - "Сохранить". <br> Можем переходить на главную страницу сайта у меня: <code>http://e92507ja.beget.tech/</code></p>
+<p>Сохраняем файл. "Файл" - "Сохранить". <br> Можем переходить на главную страницу сайта у меня: <code>http://e92507ja.beget.tech/</code></p> <br>
 
-<p>Если всё сделано верно, увидим экран приветствия Laravel:</p>
+<p>Если всё сделано верно, увидим экран приветствия Laravel:</p> <br>
 
-![img_47.png](images-for-git/img_47.png)
+![img_47.png](images-for-git/img_47.png) <br>
 
 ***
 
