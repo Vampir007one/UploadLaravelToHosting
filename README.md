@@ -3,8 +3,8 @@
 ### Настройка локального окружения <br> <br>(OsPanel, GitBash, Composer)
 <h3>1. Установка OpenServer</h3>
 Не стал ставить все компоненты, поставил только нужные для развёртывания Laravel'a. 
-Можете выполнять стандартную установку со всеми предлагаемымми компонентами. </p> 
-У меня вышло чёт такое:</p>
+Можете выполнять стандартную установку со всеми предлагаемымми компонентами.  
+У меня вышло чёт такое:
 
 ![img.png](images-for-git/img.png) <br>
 
@@ -19,22 +19,22 @@
 
 ![img_2.png](images-for-git/img_2.png) <br>
 
-<b>Сохранить и перезагрузить OSPanel</b></p>
+<b>Сохранить и перезагрузить OSPanel</b>
 <h3>2. Установка Git'a</h3>
 
-Можете выбрать редактор кода, который больше нравится вам или оставить поумолчанию. В моём предпочтении VsCode</p>
+Можете выбрать редактор кода, который больше нравится вам или оставить поумолчанию. В моём предпочтении VsCode
 
-Остальные настройки по умолчанию</p>
+Остальные настройки по умолчанию
 
 ![img_6.png](images-for-git/img_6.png) <br>
 
 <h3>3. Установка Composer'a</h3>
-Да, он вроде шёл вместе с OSPanel, но привычка, и так действительно лучше) </p>
-Прокладываете путь к модулю пыхи в OsPanel Остальное по умолчанию</p>
+Да, он вроде шёл вместе с OSPanel, но привычка, и так действительно лучше) 
+Прокладываете путь к модулю пыхи в OsPanel Остальное по умолчанию
 
 ![img_22.png](images-for-git/img_22.png) <br>
 
-Для проверки что всё установлено правильно, можете зайти в gitBash и прописать:</p><code>composer --version</code>
+Для проверки что всё установлено правильно, можете зайти в gitBash и прописать:<code>composer --version</code>
 
 
 ![img_23.png](images-for-git/img_23.png) <br>
@@ -64,84 +64,101 @@
 
 6. Проверяем, что проект работает запуская его: <br> 
 <code>php artisan serve</code>
-   ![img_27.png](images-for-git/img_27.png) <br>
+   
+    ![img_27.png](images-for-git/img_27.png) <br>
+
 7. В браузере переходим по адресу: <code>http://127.0.0.1:8000 </code>
-    Если всё ОК, то видим следующее</p>
+    Если всё ОК, то видим следующее
 
     ![img_28.png](images-for-git/img_28.png) <br>
 
 <h2>Подготовка проекта к отправке на хостинг</h2>
-1. Чтобы вернуть возможность писать команды в Bash'e и выключить сервер используем сочетание клавиш: <code>CTRL + C</code> </p>
-2. В директории <code>domains\laravel</code> ищем два файла <code>composer.json</code> и <code>composer.lock</code> открываем их любом текстовом редакторе.</p> 
-3. В файле <code>composer.json</code> редактируем строчку № 8, <code>"php": "^7.3|^8.0"</code> в итоге должно получиться <code>"php": "^7.3"</code>, сохраняем файл </p>
-4. В файле <code>composer.lock</code> редактируем строчку № 24, <br><code>"php": "^7.0|^8.0"</code> в итоге должно получиться <code>"php": "^7.0"</code>, сохраняем файл</p>
-5. В Bash'e вводим <code>composer install --ignore-platform-reqs</code>
+1. Чтобы вернуть возможность писать команды в Bash'e и выключить сервер используем сочетание клавиш: <code>CTRL + C</code> 
+2. В директории <code>domains\laravel</code> ищем два файла <code>composer.json</code> и <code>composer.lock</code> открываем их любом текстовом редакторе. 
+3. В файле <code>composer.json</code> редактируем строчку № 8, <code>"php": "^7.3|^8.0"</code> в итоге должно получиться <code>"php": "^7.3"</code>, сохраняем файл 
+4. В файле <code>composer.lock</code> редактируем строчку № 24, <br><code>"php": "^7.0|^8.0"</code> в итоге должно получиться <code>"php": "^7.0"</code>, сохраняем файл
+5. В Bash'e вводим <code>composer install --ignore-platform-reqs</code> <br>
+
     ![img_29.png](images-for-git/img_29.png) <br>
+
 6. Получаем сообщение:
+
     ![img_30.png](images-for-git/img_30.png) <br>
+
 7. Можно закрыть Bash.
 8. Архивируем папку Laravel.
 
 <h2>Подготовка хостинга для загрузки проекта</h2>
 1. Переходим в админ панель хостинга под своими данными.
 2. Заходим во вкладку "Sites"
-![img_31.png](images-for-git/img_31.png) <br>
+
+    ![img_31.png](images-for-git/img_31.png) <br>
+
 3. Нажимаем на шестерёнку в форме "Sites and linked domains" 
-![img_32.png](images-for-git/img_32.png) <br>
+
+    ![img_32.png](images-for-git/img_32.png) <br>
+
 4. Меняем версию php с 5.6 на 7.4
+
     ![img_33.png](images-for-git/img_33.png) <br>
+
     ![img_34.png](images-for-git/img_34.png) <br>
+
 5. Возвращаемся на главную страницу админки
 6. Переходим на вкладку "File manager" 
+
     ![img_35.png](images-for-git/img_35.png) <br>
+
 7. После того как перешли в Файловый менеджер заходим в папку с сайтом у меня это <code>e92507ja.beget.tech</code>
+   
     ![img_36.png](images-for-git/img_36.png) <br>
-8. В папку с сайтом <code>e92507ja.beget.tech</code> грузим наш проект архивом <code>laravel.7z[.rar, .zip]</code>
-Для этого в менюшке сверху выбираем "Загрузить файлы"</p>
 
-![img_37.png](images-for-git/img_37.png) <br>
+9. В папку с сайтом <code>e92507ja.beget.tech</code> грузим наш проект архивом <code>laravel.7z[.rar, .zip]</code>
+Для этого в менюшке сверху выбираем "Загрузить файлы"
 
-Дальше жмём <b>Browse...</b> и выбираем архив и жмём "Открыть" потом в форме нажимаем "Загрузка" </p>
+    ![img_37.png](images-for-git/img_37.png) <br>
 
-![img_38.png](images-for-git/img_38.png) <br>
+Дальше жмём <b>Browse...</b> и выбираем архив и жмём "Открыть" потом в форме нажимаем "Загрузка" 
+
+    ![img_38.png](images-for-git/img_38.png) <br>
      
-![img_39.png](images-for-git/img_39.png) <br>
+    ![img_39.png](images-for-git/img_39.png) <br>
 
-После того как файл был загружен можем закрыть форму</p>
+После того как файл был загружен можем закрыть форму
 
-![img_40.png](images-for-git/img_40.png) <br>
+    ![img_40.png](images-for-git/img_40.png) <br>
 
-Жмём по архиву "ПКМ" - "Распаковать архив" </p>
+Жмём по архиву "ПКМ" - "Распаковать архив" 
 
-![img_41.png](images-for-git/img_41.png) <br>
+    ![img_41.png](images-for-git/img_41.png) <br>
 
-Распаковка займёт какое-то время. </p>
+Распаковка займёт какое-то время. 
 
 Спустя 5-8 мин. Архив распакован. <br> 
-В итоге в папке <code>e92507ja.beget.tech</code> у нас находятся 3 файла: папка <code>laravel</code>, папка <code>public_html</code>, архив <code>laravel.7z</code></p>
+В итоге в папке <code>e92507ja.beget.tech</code> у нас находятся 3 файла: папка <code>laravel</code>, папка <code>public_html</code>, архив <code>laravel.7z</code>
 
-![img_42.png](images-for-git/img_42.png) <br>
+    ![img_42.png](images-for-git/img_42.png) <br>
 
-9. В левом окне открываем папку <code>laravel</code>, а вправом папку <code>public_html</code> и в правом окне удаляем все файлы кроме папки <br> <code>cgi-bin</code> в итоге должно выглядить как на скриншоте ниже</p>
+9. В левом окне открываем папку <code>laravel</code>, а вправом папку <code>public_html</code> и в правом окне удаляем все файлы кроме папки <br> <code>cgi-bin</code> в итоге должно выглядить как на скриншоте ниже
    
 ![img_43.png](images-for-git/img_43.png) <br>
 10. В левом окне переходим в папку <code>public</code>, выделяем все файлы кроме <code>..</code>, далее жмём "ПКМ" - "Переместить"
 
 ![img_44.png](images-for-git/img_44.png) <br>
 
-11. В итоге, все файлы из папки <code>public</code> переместились в папку <code>public_html</code></p>
+11. В итоге, все файлы из папки <code>public</code> переместились в папку <code>public_html</code>
 ![img_45.png](images-for-git/img_45.png) <br>
 
-12. В папке <code>public_html</code> открываем файл <code>index.php</code> чтобы отредактировать его <br> Нас интересует строка № 34 <br> <code>require __DIR__.'/../vendor/autoload.php';</code></p> 
-Перед <code>vendor</code> добавляем директорию <code>laravel</code></p>
+12. В папке <code>public_html</code> открываем файл <code>index.php</code> чтобы отредактировать его <br> Нас интересует строка № 34 <br> <code>require __DIR__.'/../vendor/autoload.php';</code> 
+Перед <code>vendor</code> добавляем директорию <code>laravel</code>
 
-В итоге строка должна выглядить так: <br><code>require __DIR__.'/../laravel/vendor/autoload.php';</code></p>
-Дальше в этом же файле ищем строку №47: <br> <code>$app = require_once __DIR__.'/../bootstrap/app.php';</code></p>
-Делаем тоже самое. В итоге строка выглядит, так: <br> <code>$app = require_once __DIR__.'/../laravel/bootstrap/app.php';</code></p>
+В итоге строка должна выглядить так: <br><code>require __DIR__.'/../laravel/vendor/autoload.php';</code>
+Дальше в этом же файле ищем строку №47: <br> <code>$app = require_once __DIR__.'/../bootstrap/app.php';</code>
+Делаем тоже самое. В итоге строка выглядит, так: <br> <code>$app = require_once __DIR__.'/../laravel/bootstrap/app.php';</code>
 
 ![img_46.png](images-for-git/img_46.png) <br>
 
-Сохраняем файл. "Файл" - "Сохранить". <br> Можем переходить на главную страницу сайта у меня: <code>http://e92507ja.beget.tech/</code></p>
+Сохраняем файл. "Файл" - "Сохранить". <br> Можем переходить на главную страницу сайта у меня: <code>http://e92507ja.beget.tech/</code>
 
 Если всё сделано верно, увидим экран приветствия Laravel:
 
