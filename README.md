@@ -43,29 +43,29 @@
 3. В GitBash'e переходим в директорию <code>OpenServer\domains</code> у меня это <code>C:\OpenServer\domains</code> для этого в bash'e нужно написать следующее <br> <code>cd /C/OpenServer/domains/
    </code> <br>
 
-   ![img_20.png](images-for-git/img_20.png) <br>
+![img_20.png](images-for-git/img_20.png) <br>
 
 4. Качаем проект через <b>composer</b>. Для этого в bash вводим: <br> <code>composer create-project laravel/laravel</code> <br>
-   ![img_21.png](images-for-git/img_21.png) <br>
+![img_21.png](images-for-git/img_21.png) <br>
    <br>
-   ![img_24.png](images-for-git/img_24.png) <br>
+![img_24.png](images-for-git/img_24.png) <br>
    <br>
-   ![img_25.png](images-for-git/img_25.png) <br>
+![img_25.png](images-for-git/img_25.png) <br>
 
 5. После автоматической установки всех пакет и обновления всех зависимостей. Переходим в папке проекта. GitBash: <br> 
 <code>cd laravel</code> <br>
 
-   ![img_26.png](images-for-git/img_26.png) <br>
+![img_26.png](images-for-git/img_26.png) <br>
 
 6. Проверяем, что проект работает запуская его: <br> 
 <code>php artisan serve</code>
    
-    ![img_27.png](images-for-git/img_27.png) <br>
+![img_27.png](images-for-git/img_27.png) <br>
 
 7. В браузере переходим по адресу: <code>http://127.0.0.1:8000 </code>
     Если всё ОК, то видим следующее
 
-    ![img_28.png](images-for-git/img_28.png) <br>
+![img_28.png](images-for-git/img_28.png) <br>
 
 <h2>Подготовка проекта к отправке на хостинг</h2>
 1. Чтобы вернуть возможность писать команды в Bash'e и выключить сервер используем сочетание клавиш: <code>CTRL + C</code> <br>
@@ -78,7 +78,7 @@
 
 6. Получаем сообщение:
 
-    ![img_30.png](images-for-git/img_30.png) <br>
+![img_30.png](images-for-git/img_30.png) <br>
 
 7. Можно закрыть Bash.
 8. Архивируем папку Laravel.
@@ -87,31 +87,31 @@
 1. Переходим в админ панель хостинга под своими данными.
 2. Заходим во вкладку "Sites"
 
-    ![img_31.png](images-for-git/img_31.png) <br>
+![img_31.png](images-for-git/img_31.png) <br>
 
 3. Нажимаем на шестерёнку в форме "Sites and linked domains" 
 
-    ![img_32.png](images-for-git/img_32.png) <br>
+![img_32.png](images-for-git/img_32.png) <br>
 
 4. Меняем версию php с 5.6 на 7.4
 
-    ![img_33.png](images-for-git/img_33.png) <br>
+![img_33.png](images-for-git/img_33.png) <br>
 
-    ![img_34.png](images-for-git/img_34.png) <br>
+![img_34.png](images-for-git/img_34.png) <br>
 
 5. Возвращаемся на главную страницу админки
 6. Переходим на вкладку "File manager" 
 
-    ![img_35.png](images-for-git/img_35.png) <br>
+![img_35.png](images-for-git/img_35.png) <br>
 
 7. После того как перешли в Файловый менеджер заходим в папку с сайтом у меня это <code>e92507ja.beget.tech</code>
    
-    ![img_36.png](images-for-git/img_36.png) <br>
+![img_36.png](images-for-git/img_36.png) <br>
 
 9. В папку с сайтом <code>e92507ja.beget.tech</code> грузим наш проект архивом <code>laravel.7z[.rar, .zip]</code>
 Для этого в менюшке сверху выбираем "Загрузить файлы"
 
-    ![img_37.png](images-for-git/img_37.png) <br>
+![img_37.png](images-for-git/img_37.png) <br>
 
 Дальше жмём <b>Browse...</b> и выбираем архив и жмём "Открыть" потом в форме нажимаем "Загрузка" 
 
